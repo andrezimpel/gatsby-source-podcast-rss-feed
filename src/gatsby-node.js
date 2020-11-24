@@ -12,7 +12,9 @@ exports.sourceNodes = async (
 
   const { feedURL } = options
   const feed = await parseURL(feedURL)
-
+  
+  console.log('feed', feed);
+  
   feed.items.forEach(item => {
     const nodeId = item[options.id]
     const type = `podcastRssFeedEpisode`
